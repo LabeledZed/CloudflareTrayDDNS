@@ -1,5 +1,8 @@
-# Cloudflare Dynamic IP Updater
+![GitHub last commit](https://img.shields.io/github/last-commit/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
+![GitHub watchers](https://img.shields.io/github/watchers/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
+![GitHub Repo stars](https://img.shields.io/github/stars/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
 
+# Cloudflare Dynamic IP Updater
 A Python script to automatically update Cloudflare DNS records with your dynamic IP, supporting proxy toggling and multiple records.
 
 ## Features
