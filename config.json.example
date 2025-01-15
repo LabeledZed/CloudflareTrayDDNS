@@ -1,0 +1,16 @@
+{
+    "records": [
+        {
+            "api_token": "your_api_token",
+            "zone_id": "your_zone_id",
+            "record_name": "example.com",
+            "proxied": true
+        },
+        {
+            "api_token": "another_api_token",
+            "zone_id": "another_zone_id",
+            "record_name": "sub.example.com",
+            "proxied": false
+        }
+    ]
+}
