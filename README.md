@@ -2,8 +2,9 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
 ![GitHub Repo stars](https://img.shields.io/github/stars/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
 
-# Cloudflare Dynamic IP Updater
+# Cloudflare Dynamic IP Updater (with system tray support)
 A Python script to automatically update Cloudflare DNS records with your dynamic IP, supporting proxy toggling and multiple records.
+It runs in the background, outputs its console to debug.log and can be exited from its icon in the system tray.
 
 ## Features
 - Automatically fetches the current public IP using the `ipify` service.
