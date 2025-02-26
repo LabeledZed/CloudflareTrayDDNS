@@ -1,7 +1,3 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
-![GitHub watchers](https://img.shields.io/github/watchers/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
-![GitHub Repo stars](https://img.shields.io/github/stars/Eli-Zac/Cloudflare-Dynamic-IP-Updater?style=for-the-badge&color=orange)
-
 # Cloudflare Dynamic IP Updater (with system tray support)
 A Python script to automatically update Cloudflare DNS records with your dynamic IP, supporting proxy toggling and multiple records.
 It runs in the background, outputs its console to debug.log and can be exited from its icon in the system tray.
@@ -16,6 +12,8 @@ It runs in the background, outputs its console to debug.log and can be exited fr
 ## Requirements
 - Python 3.7 or higher
 - `requests` library
+- `pillow` library
+- `pystray` library
 
 ## Setup Instructions
 
@@ -62,32 +60,7 @@ python main.py
 The script will fetch your current public IP and update the specified DNS records if the IP changes.
 
 ### 5. Run Continuously
-To keep the script running 24/7, use a process manager like screen, tmux, or a system service.
-#### Using `screen`:
-```
-screen -S ip-updater python cloudflare_ip_updater.py
-```
-#### Using a Systemd Service (Linux):
-Create a service file (e.g., `/etc/systemd/system/cloudflare-ip-updater.service`):
-```ini
-[Unit]
-Description=Cloudflare Dynamic IP Updater
-After=network.target
-
-[Service]
-ExecStart=/usr/bin/python3 /path/to/cloudflare_ip_updater.py
-Restart=always
-User=your_username
-WorkingDirectory=/path/to/repo
-
-[Install]
-WantedBy=multi-user.target
-```
-Enable and start the service:
-```bash
-sudo systemctl enable cloudflare-ip-updater
-sudo systemctl start cloudflare-ip-updater
-```
+Compile the script using pyinstaller or download the latest executable from the releases page, and put it inside shell:Startup (the Startup folder).
 
 ---
 ## Configuration Example
